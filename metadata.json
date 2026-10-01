@@ -1,0 +1,6 @@
+{
+  "name": "Manazil Al Madinah Hotel",
+  "description": "Official luxury hotel website for Manazil Al Madinah Hotel in Madinah, Saudi Arabia. Explore rooms, facilities, and location near Al-Masjid an-Nabawi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
