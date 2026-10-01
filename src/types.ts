@@ -23,6 +23,7 @@ export interface Facility {
   description: string;
   iconName: string;
   badge?: string;
+  image?: string;
 }
 
 export interface FAQItem {

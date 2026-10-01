@@ -358,26 +358,43 @@ export const HomePage: React.FC<HomePageProps> = ({
             {FACILITIES_DATA.map((fac) => (
               <div
                 key={fac.id}
-                className="p-6 rounded-2xl bg-gradient-to-b from-purple-950/50 to-slate-900/80 border border-purple-800/40 hover:border-amber-400/50 transition-all duration-300 space-y-3 group"
+                className="rounded-2xl bg-gradient-to-b from-purple-950/50 to-slate-900/80 border border-purple-800/40 hover:border-amber-400/50 overflow-hidden transition-all duration-300 group flex flex-col justify-between shadow-lg"
               >
-                <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-xl bg-purple-900/60 border border-purple-700/50 group-hover:bg-amber-500/20 group-hover:border-amber-400/40 transition-colors">
-                    {getFacilityIcon(fac.iconName)}
-                  </div>
-                  {fac.badge && (
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded bg-purple-900/80 text-amber-300 border border-purple-700/50">
-                      {fac.badge}
-                    </span>
+                <div>
+                  {/* Facility Banner Image */}
+                  {fac.image && (
+                    <div className="relative h-44 overflow-hidden">
+                      <img
+                        src={fac.image}
+                        alt={fac.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                      
+                      <div className="absolute top-3 left-3 p-2.5 rounded-xl bg-slate-950/80 backdrop-blur-md border border-purple-700/50 group-hover:bg-amber-500/20 group-hover:border-amber-400/40 transition-colors">
+                        {getFacilityIcon(fac.iconName)}
+                      </div>
+
+                      {fac.badge && (
+                        <span className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded bg-slate-950/80 text-amber-300 border border-amber-400/30 backdrop-blur-md">
+                          {fac.badge}
+                        </span>
+                      )}
+                    </div>
                   )}
+
+                  {/* Facility Content */}
+                  <div className="p-6 space-y-2">
+                    <h3 className="font-serif text-lg font-bold text-white group-hover:text-amber-300 transition-colors">
+                      {fac.title}
+                    </h3>
+
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {fac.description}
+                    </p>
+                  </div>
                 </div>
-
-                <h3 className="font-serif text-lg font-bold text-white group-hover:text-amber-300 transition-colors">
-                  {fac.title}
-                </h3>
-
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  {fac.description}
-                </p>
               </div>
             ))}
           </div>

@@ -6,6 +6,13 @@ import quadImg from '../assets/images/quad_room_madinah_1790835314750.jpg';
 import lobbyImg from '../assets/images/hotel_reception_lobby_1790835326137.jpg';
 import locationImg from '../assets/images/madinah_location_view_1790835338133.jpg';
 
+import wifiImg from '../assets/images/wifi_facility_1790836184699.jpg';
+import receptionImg from '../assets/images/reception_facility_1790836202004.jpg';
+import housekeepingImg from '../assets/images/housekeeping_facility_1790836218429.jpg';
+import acImg from '../assets/images/ac_facility_1790836231545.jpg';
+import parkingImg from '../assets/images/parking_facility_1790836246770.jpg';
+import conciergeImg from '../assets/images/concierge_facility_1790836264084.jpg';
+
 export const HOTEL_INFO = {
   name: "Manazil Al Madinah Hotel",
   arabicName: "فندق منازل المدينة",
@@ -99,42 +106,48 @@ export const FACILITIES_DATA: Facility[] = [
     title: 'High-Speed Wi-Fi',
     description: 'Complimentary fiber-optic internet connection accessible throughout all guest rooms, corridors, and the grand lobby.',
     iconName: 'Wifi',
-    badge: 'Free & Unlimited'
+    badge: 'Free & Unlimited',
+    image: wifiImg
   },
   {
     id: 'reception',
     title: '24/7 Front Desk & Reception',
     description: 'Round-the-clock multilingual reception staff to assist with check-in, keycards, local guidance, taxi bookings, and Umrah inquiries.',
     iconName: 'Clock',
-    badge: 'Always Open'
+    badge: 'Always Open',
+    image: receptionImg
   },
   {
     id: 'housekeeping',
     title: 'Daily Housekeeping & Laundry',
     description: 'Rigorous daily room sanitation, fresh bed linen replacement, pristine towels, and fast express laundry services upon request.',
     iconName: 'Sparkles',
-    badge: 'Daily Service'
+    badge: 'Daily Service',
+    image: housekeepingImg
   },
   {
     id: 'ac-rooms',
     title: 'Comfortable AC Rooms',
     description: 'Individual digital climate control in every room, soundproof double-glazed windows, and premium orthopedic bedding.',
     iconName: 'Wind',
-    badge: 'Climate Control'
+    badge: 'Climate Control',
+    image: acImg
   },
   {
     id: 'parking',
     title: 'Valet & Secure Parking',
     description: 'Dedicated parking facilities and valet assistance for guests traveling with personal vehicles or private transport.',
     iconName: 'Car',
-    badge: 'On-Site Facility'
+    badge: 'On-Site Facility',
+    image: parkingImg
   },
   {
     id: 'concierge',
     title: 'Luggage Storage & Concierge',
     description: 'Secure luggage holding before check-in or after check-out, wheelchair accessibility, and prayer timetable guidance.',
     iconName: 'Briefcase',
-    badge: 'Guest Care'
+    badge: 'Guest Care',
+    image: conciergeImg
   }
 ];
 
